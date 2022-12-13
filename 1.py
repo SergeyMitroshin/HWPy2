@@ -4,11 +4,17 @@
 # вверх одной и той же стороной.
 
 
-
-a = int(input('введите число 1-7: '))
-if a==6 or a==7:
-    print('да')
-elif a>0 and a<6:
-    print('нет')
+amount = int(input('Введите количество монет: '))
+count = 0
+for i in range(amount):
+    side = int(input('введите орел-1, решка-0: '))
+    if side == 1:
+        count += 1
+if count < amount / 2:
+    print (count)
 else:
-    print('неправильный ввод!')
+    print (amount - count)
+
+
+
+
